@@ -8,9 +8,8 @@ describe('UserTopComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserTopComponent ]
-    })
-    .compileComponents();
+      declarations: [UserTopComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(UserTopComponent);
     component = fixture.componentInstance;
