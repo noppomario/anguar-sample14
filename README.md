@@ -86,6 +86,10 @@ $ npm run ng generate component component-name
 
 # 静的解析でNGが出るため修正する
 $ npm run fix
+
+# 自動で修正できないNGを修正
+- OnInit及び空のコンストラクタを削除する
+- OnInitはimplementsおよびimport文も消す
 ```
 
 ### ヘルプ表示
