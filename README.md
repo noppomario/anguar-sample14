@@ -9,6 +9,12 @@
 - Node.js の導入
 - Google Chromeの導入(デバッグ/テスト用)
 
+## 構成要素
+
+- [Angular](https://angular.jp)
+- [NG-Zorro](https://ng.ant.design/docs/introduce/en)
+  - UIコンポーネントライブラリ
+
 ## 導入
 
 ```bash
@@ -77,9 +83,11 @@ $ npm run clean
 
 ### 実装の雛形を追加
 
+#### Angular
+
 ```bash
 # componentを追加する
-$ npm run ng generate component component-name
+$ npx ng generate component component-name --module app.module
 
 ※その他以下が利用可能
   npm run ng generate directive|pipe|service|class|guard|interface|enum|module
@@ -92,9 +100,13 @@ $ npm run fix
 - OnInitはimplementsおよびimport文も消す
 ```
 
-### ヘルプ表示
+#### NG-ZORRO
 
 ```bash
-# ngコマンドのヘルプを表示
-$ npm run ng help
+# 例: ng g ng-zorro-antd:form-normal-login login
+$ npx ng g ng-zorro-antd:[schematic] <name> [options] --module app.module
+
+- Angular同様NGを修正する
 ```
+
+※[公式ドキュメント](https://ng.ant.design/components/overview/en)から`Copy Generated Command`アイコンをクリックすることで取得できる
