@@ -1,27 +1,96 @@
-# AngularSample14
+# angular-sample
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
+## 概要
 
-## Development server
+[Angular](https://angular.jp)フレームワークを使ったサンプル
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 事前準備
 
-## Code scaffolding
+- Node.js の導入
+- Google Chromeの導入(デバッグ/テスト用)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 導入
 
-## Build
+```bash
+# インストール
+$ npm install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# 開発サーバ起動(ホットリロード)
+$ npm run start
+```
 
-## Running unit tests
+## ディレクトリ構成
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+|ディレクトリ| |格納されるファイル|
+|:----|:----|:----|
+|src/app/|pages/|アプリケーションの画面|
+| |pages/shared/|複数の画面で使われる部品|
+| |models/|ドメインモデル|
+| |lib/|アプリケーション自身と外部の何らかの連携で利用する部品|
+| |utils/|アプリケーション固有**ではない**部品|
+|src/assets/| |画像ファイルなど|
 
-## Running end-to-end tests
+※[参考文献](https://speakerdeck.com/okunokentaro/frontend-conference-2019)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 各種コマンド
 
-## Further help
+### 起動コマンド
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+# 開発サーバ起動(ホットリロード)
+$ npm run start
+```
+
+### 静的解析
+
+```bash
+# 実行
+$ npm run lint
+
+# 強制的に修正
+$ npm run fix
+```
+
+### テスト
+
+```bash
+# 単体テスト(ホットリロード)
+$ npm run test
+
+# e2eテスト
+$ npm run e2e
+```
+
+### ビルド
+
+```bash
+# 実運用環境で利用する.js/.css/.htmlを生成する
+$ npm run build
+```
+
+### 生成ファイルのリセット
+
+```bash
+# distフォルダを削除
+$ npm run clean
+```
+
+### 実装の雛形を追加
+
+```bash
+# componentを追加する
+$ npm run ng generate component component-name
+
+※その他以下が利用可能
+  npm run ng generate directive|pipe|service|class|guard|interface|enum|module
+
+# 静的解析でNGが出るため修正する
+$ npm run fix
+```
+
+### ヘルプ表示
+
+```bash
+# ngコマンドのヘルプを表示
+$ npm run ng help
+```
