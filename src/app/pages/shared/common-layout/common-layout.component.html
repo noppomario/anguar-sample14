@@ -8,8 +8,9 @@
     [nzTrigger]="null"
   >
     <div class="sidebar-logo">
-      <a href="https://ng.ant.design/" target="_blank">
-        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo" />
+      <a routerLink="./">
+        <!--  縮小時のマージン -->
+        <h1></h1>
         <h1>Angular Sample14</h1>
       </a>
     </div>
@@ -22,7 +23,7 @@
       <li nz-submenu nzOpen nzTitle="システム管理" nzIcon="setting">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">グローバル設定</a>
+            <a routerLink="./global-config">グローバル設定</a>
           </li>
           <li nz-menu-item nzMatchRouter>
             <a>XXX設定</a>
@@ -35,7 +36,7 @@
       <li nz-submenu nzOpen nzTitle="ユーザ管理" nzIcon="team">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a>ユーザ設定</a>
+            <a routerLink="./user">ユーザ設定</a>
           </li>
         </ul>
       </li>
@@ -55,7 +56,7 @@
     </nz-header>
     <nz-content>
       <div class="inner-content">
-        <ng-content></ng-content>
+        <router-outlet></router-outlet>
       </div>
     </nz-content>
   </nz-layout>

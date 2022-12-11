@@ -15,6 +15,10 @@ import { PageAdminComponent } from './pages/page-admin/page-admin.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonLayoutComponent } from './pages/shared/common-layout/common-layout.component';
+import { GlobalConfigComponent } from './pages/page-admin/global-config/global-config.component';
+import { UserComponent } from './pages/page-admin/user/user.component';
+import { AdminTopComponent } from './pages/page-admin/admin-top/admin-top.component';
+import { UserTopComponent } from './pages/page-user/user-top/user-top.component';
 
 registerLocaleData(ja);
 
@@ -24,6 +28,10 @@ registerLocaleData(ja);
     PageAdminComponent,
     PageUserComponent,
     CommonLayoutComponent,
+    GlobalConfigComponent,
+    UserComponent,
+    AdminTopComponent,
+    UserTopComponent,
   ],
   imports: [
     BrowserModule,
