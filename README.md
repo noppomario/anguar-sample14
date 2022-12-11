@@ -87,6 +87,7 @@ $ npm run clean
 
 ```bash
 # componentを追加する
+$ cd xxxx
 $ npx ng generate component component-name --module app.module
 
 ※その他以下が利用可能
@@ -104,6 +105,7 @@ $ npm run fix
 
 ```bash
 # 例: ng g ng-zorro-antd:form-normal-login login
+$ cd xxxx
 $ npx ng g ng-zorro-antd:[schematic] <name> [options] --module app.module
 
 - Angular同様NGを修正する
