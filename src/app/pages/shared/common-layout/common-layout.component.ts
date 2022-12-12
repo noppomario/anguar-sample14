@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./common-layout.component.scss'],
 })
 export class CommonLayoutComponent {
+  isDarkTheme = false;
+
   isCollapsed = false;
 }

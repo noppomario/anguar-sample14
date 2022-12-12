@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzSwitchModule } from 'ng-zorro-antd/switch';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { IconsProviderModule } from './icons-provider.module';
 import { PageUserComponent } from './pages/page-user/page-user.component';
 import { PageAdminComponent } from './pages/page-admin/page-admin.component';
@@ -42,6 +44,8 @@ registerLocaleData(ja);
     IconsProviderModule,
     NzLayoutModule,
     NzMenuModule,
+    NzSwitchModule,
+    NzDividerModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: ja_JP }],
   bootstrap: [AppComponent],

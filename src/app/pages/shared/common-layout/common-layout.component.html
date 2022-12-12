@@ -16,7 +16,7 @@
     </div>
     <ul
       nz-menu
-      nzTheme="dark"
+      [nzTheme]="isDarkTheme ? 'dark' : 'light'"
       nzMode="inline"
       [nzInlineCollapsed]="isCollapsed"
     >
@@ -52,6 +52,13 @@
             [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
           ></span>
         </span>
+        <nz-divider nzType="vertical"></nz-divider>
+        LightMode
+        <nz-switch [(ngModel)]="isDarkTheme">
+          <span checked>Dark</span>
+          <span unchecked>Light</span>
+        </nz-switch>
+        DarkMode
       </div>
     </nz-header>
     <nz-content>
